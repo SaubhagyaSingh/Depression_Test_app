@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>982</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+background-color:rgb(174, 255, 208);
+border-radius:10px;
+}
+
+QPushButton:pressed{
+background-color:rgb(83, 255, 163);
+color:rgba(255,2555,255,200);	
+border-radius:20px;
+padding-left:5px;
+padding-right:5px;
+}
+
+</string>
+  </property>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>80</y>
+     <width>491</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Be Honest about your feelings to get the best test result possible</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="l1">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>140</y>
+     <width>411</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>1. Little interest or pleasure in doing things </string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>30</y>
+     <width>511</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:50px;</string>
+   </property>
+   <property name="text">
+    <string>Give this test a Try</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>861</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255,255,255);
+border-radius:50px</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>981</width>
+     <height>691</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>i10.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="r1">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>190</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Not at all</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg3</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>220</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Several days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg3</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>250</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>More than half of the days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg3</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>280</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nearly every day</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg3</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r13">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>380</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Several days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg2</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r8">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>440</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nearly every day</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg2</string>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="l2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>310</y>
+     <width>421</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>2. Feeling down, depressed, or hopeless </string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="r5">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>350</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Not at all</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg2</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r7">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>410</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>More than half of the days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg2</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r10">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>550</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Several days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg4</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r12">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>610</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nearly every day</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg4</string>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="l3">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>470</y>
+     <width>421</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>3. Trouble falling or staying asleep, or sleeping too much</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="r9">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>520</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Not at all</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg4</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r11">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>580</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>More than half of the days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg4</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r15">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>220</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Several days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg5</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r17">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>280</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nearly every day</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg5</string>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="l4">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>140</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>4.Feeling tired or having little energy</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="r14">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>190</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Not at all</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg5</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r16">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>250</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>More than half of the days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg5</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r19">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>390</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Several days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg6</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r20">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>450</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nearly every day</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg6</string>
+   </attribute>
+  </widget>
+  <widget class="QLabel" name="l5">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>310</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>5.Poor appetite or overeating</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="r18">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>360</y>
+     <width>171</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Not at all</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg6</string>
+   </attribute>
+  </widget>
+  <widget class="QRadioButton" name="r6">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>420</y>
+     <width>181</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>More than half of the days</string>
+   </property>
+   <attribute name="buttonGroup">
+    <string notr="true">bg6</string>
+   </attribute>
+  </widget>
+  <widget class="QPushButton" name="b1">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>600</y>
+     <width>281</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <strikeout>false</strikeout>
+     <kerning>true</kerning>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="l6">
+   <property name="geometry">
+    <rect>
+     <x>510</x>
+     <y>510</y>
+     <width>341</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:50px;</string>
+   </property>
+   <property name="text">
+    <string>Just 5 more questions to go!</string>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>l1</zorder>
+  <zorder>label_5</zorder>
+  <zorder>label_6</zorder>
+  <zorder>r1</zorder>
+  <zorder>r2</zorder>
+  <zorder>r3</zorder>
+  <zorder>r4</zorder>
+  <zorder>r13</zorder>
+  <zorder>r8</zorder>
+  <zorder>l2</zorder>
+  <zorder>r5</zorder>
+  <zorder>r7</zorder>
+  <zorder>r10</zorder>
+  <zorder>r12</zorder>
+  <zorder>l3</zorder>
+  <zorder>r9</zorder>
+  <zorder>r11</zorder>
+  <zorder>r15</zorder>
+  <zorder>r17</zorder>
+  <zorder>l4</zorder>
+  <zorder>r14</zorder>
+  <zorder>r16</zorder>
+  <zorder>r19</zorder>
+  <zorder>r20</zorder>
+  <zorder>l5</zorder>
+  <zorder>r18</zorder>
+  <zorder>r6</zorder>
+  <zorder>b1</zorder>
+  <zorder>l6</zorder>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+ <buttongroups>
+  <buttongroup name="bg3">
+   <property name="exclusive">
+    <bool>true</bool>
+   </property>
+  </buttongroup>
+  <buttongroup name="bg2">
+   <property name="exclusive">
+    <bool>true</bool>
+   </property>
+  </buttongroup>
+  <buttongroup name="bg4">
+   <property name="exclusive">
+    <bool>true</bool>
+   </property>
+  </buttongroup>
+  <buttongroup name="bg5">
+   <property name="exclusive">
+    <bool>true</bool>
+   </property>
+  </buttongroup>
+  <buttongroup name="bg6">
+   <property name="exclusive">
+    <bool>true</bool>
+   </property>
+  </buttongroup>
+ </buttongroups>
+</ui>
