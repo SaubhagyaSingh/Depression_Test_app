@@ -60,7 +60,7 @@ class register(QDialog):
         age = self.tb5.text()
         address = self.tb6.text()
         ph = self.tb7.text()
-
+        id1 = "1"
         db = con.connect(host="localhost", user="root", password="", db="antidepbot")
         cursor = db.cursor()
         cursor.execute(
@@ -81,6 +81,8 @@ class register(QDialog):
         else:
             cursor.execute(
                 "insert into details values('"
+                + id1
+                + '","'
                 + username
                 + "','"
                 + password
