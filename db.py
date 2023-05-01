@@ -5,6 +5,9 @@ import sys
 
 import mysql.connector as con
 
+global score
+score = 0
+
 
 class Loginapp(QDialog):
     def __init__(self):
@@ -88,70 +91,69 @@ class register(QDialog):
 
 
 class form(QDialog):
-    def __init__(self, result):
-        self.result = result
+    def __init__(self):
         super(form, self).__init__()
         loadUi("form.ui", self)
         self.b1.clicked.connect(self.nextpage)
-        self.b1.clicked.connect(self.calculate_score)
         self.counter = 0
-        self.score = 0
 
     def calculate_score(self):
+        global score
         if self.r1.isChecked():
-            self.score = self.score + 4
+            score = score + 4
         if self.r5.isChecked():
-            self.score = self.score + 4
+            score = score + 4
         if self.r9.isChecked():
-            self.score = self.score + 4
+            score = score + 4
         if self.r13.isChecked():
-            self.score = self.score + 4
+            score = score + 4
         if self.r17.isChecked():
-            self.score = self.score + 4
+            score = score + 4
 
         if self.r2.isChecked():
-            self.score = self.score + 3
+            score = score + 3
         if self.r6.isChecked():
-            self.score = self.score + 3
+            score = score + 3
         if self.r10.isChecked():
-            self.score = self.score + 3
+            score = score + 3
         if self.r14.isChecked():
-            self.score = self.score + 3
+            score = score + 3
         if self.r18.isChecked():
-            self.score = self.score + 3
+            score = score + 3
 
         if self.r3.isChecked():
-            self.score = self.score + 2
+            score = score + 2
         if self.r7.isChecked():
-            self.score = self.score + 2
+            score = score + 2
         if self.r11.isChecked():
-            self.score = self.score + 2
+            score = score + 2
         if self.r15.isChecked():
-            self.score = self.score + 2
+            score = score + 2
         if self.r19.isChecked():
-            self.score = self.score + 2
+            score = score + 2
 
         if self.r4.isChecked():
-            self.score = self.score + 1
+            score = score + 1
         if self.r8.isChecked():
-            self.score = self.score + 1
+            score = score + 1
         if self.r12.isChecked():
-            self.score = self.score + 1
+            score = score + 1
         if self.r16.isChecked():
-            self.score = self.score + 1
+            score = score + 1
         if self.r20.isChecked():
-            self.score = self.score + 1
+            score = score + 1
 
-        # print(self.score)
+        print(score)
 
     def show_results(self):
-        # self.result.setscore(self.score)
-        # print(self.score)
-        #  result.setscore(self.score)
+        result.setscore()
         widget.setCurrentIndex(3)
 
     def nextpage(self):
+        global score
         if self.counter == 0:
+            self.calculate_score()
+
             self.bg2.setExclusive(False)
             self.bg3.setExclusive(False)
             self.bg4.setExclusive(False)
@@ -205,6 +207,7 @@ class form(QDialog):
             self.counter = self.counter + 1
 
         elif self.counter == 1:
+            self.calculate_score()
             self.show_results()
 
 
@@ -212,24 +215,21 @@ class result(QDialog):
     def __init__(self):
         super(result, self).__init__()
         loadUi("results.ui", self)
-        # self.score = 0
-        # self.marks.setText(f"{self.score}")
+        self.setscore()
 
-        if self.score <= 15:
+    def setscore(self):
+        global score
+        self.marks.setText(f"{score}")
+        if score <= 15:
             self.dr.setText("Your Score lies in the Category of Severe Depression")
-        elif 15 < self.score <= 25:
+        elif 15 < score <= 25:
             self.dr.setText("Your Score lies in the Category of Moderate Depression")
-        elif 25 < self.score <= 35:
+        elif 25 < score <= 35:
             self.dr.setText("Your Score lies in the Category of Mild Depression")
         else:
             self.dr.setText(
                 "You Are Perfectly Fit! Great job. Continue your daily routine you are doing great"
             )
-
-    # def setscore(self, score):
-    #     self.score = score
-    #     print(self.score, "kuch bhi random")
-    #     self.marks.setText(f"{self.score}")
 
 
 app = QApplication(sys.argv)
@@ -237,7 +237,7 @@ widget = QtWidgets.QStackedWidget()
 loginform = Loginapp()
 registerform = register()
 result = result()
-form = form(result)
+form = form()
 widget.addWidget(loginform)
 widget.addWidget(registerform)
 widget.addWidget(form)
