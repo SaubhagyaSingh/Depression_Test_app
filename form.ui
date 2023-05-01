@@ -195,7 +195,7 @@ border-radius:50px</string>
     <string notr="true">bg3</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="r13">
+  <widget class="QRadioButton" name="r6">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -363,7 +363,7 @@ border-radius:50px</string>
     <string notr="true">bg4</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="r15">
+  <widget class="QRadioButton" name="r14">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -379,7 +379,7 @@ border-radius:50px</string>
     <string notr="true">bg5</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="r17">
+  <widget class="QRadioButton" name="r16">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -415,7 +415,7 @@ border-radius:50px</string>
     <string>4.Feeling tired or having little energy</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="r14">
+  <widget class="QRadioButton" name="r13">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -431,7 +431,7 @@ border-radius:50px</string>
     <string notr="true">bg5</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="r16">
+  <widget class="QRadioButton" name="r15">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -447,7 +447,7 @@ border-radius:50px</string>
     <string notr="true">bg5</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="r19">
+  <widget class="QRadioButton" name="r18">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -499,7 +499,7 @@ border-radius:50px</string>
     <string>5.Poor appetite or overeating</string>
    </property>
   </widget>
-  <widget class="QRadioButton" name="r18">
+  <widget class="QRadioButton" name="r17">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -515,7 +515,7 @@ border-radius:50px</string>
     <string notr="true">bg6</string>
    </attribute>
   </widget>
-  <widget class="QRadioButton" name="r6">
+  <widget class="QRadioButton" name="r19">
    <property name="geometry">
     <rect>
      <x>530</x>
@@ -544,6 +544,7 @@ border-radius:50px</string>
     <font>
      <pointsize>12</pointsize>
      <weight>75</weight>
+     <italic>false</italic>
      <bold>true</bold>
      <strikeout>false</strikeout>
      <kerning>true</kerning>
@@ -591,7 +592,7 @@ border-radius:50px</string>
   <zorder>r2</zorder>
   <zorder>r3</zorder>
   <zorder>r4</zorder>
-  <zorder>r13</zorder>
+  <zorder>r6</zorder>
   <zorder>r8</zorder>
   <zorder>l2</zorder>
   <zorder>r5</zorder>
@@ -601,16 +602,16 @@ border-radius:50px</string>
   <zorder>l3</zorder>
   <zorder>r9</zorder>
   <zorder>r11</zorder>
-  <zorder>r15</zorder>
-  <zorder>r17</zorder>
-  <zorder>l4</zorder>
   <zorder>r14</zorder>
   <zorder>r16</zorder>
-  <zorder>r19</zorder>
+  <zorder>l4</zorder>
+  <zorder>r13</zorder>
+  <zorder>r15</zorder>
+  <zorder>r18</zorder>
   <zorder>r20</zorder>
   <zorder>l5</zorder>
-  <zorder>r18</zorder>
-  <zorder>r6</zorder>
+  <zorder>r17</zorder>
+  <zorder>r19</zorder>
   <zorder>b1</zorder>
   <zorder>l6</zorder>
  </widget>
@@ -619,11 +620,6 @@ border-radius:50px</string>
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="bg3">
-   <property name="exclusive">
-    <bool>true</bool>
-   </property>
-  </buttongroup>
   <buttongroup name="bg2">
    <property name="exclusive">
     <bool>true</bool>
@@ -634,12 +630,17 @@ border-radius:50px</string>
     <bool>true</bool>
    </property>
   </buttongroup>
-  <buttongroup name="bg5">
+  <buttongroup name="bg3">
    <property name="exclusive">
     <bool>true</bool>
    </property>
   </buttongroup>
   <buttongroup name="bg6">
+   <property name="exclusive">
+    <bool>true</bool>
+   </property>
+  </buttongroup>
+  <buttongroup name="bg5">
    <property name="exclusive">
     <bool>true</bool>
    </property>
