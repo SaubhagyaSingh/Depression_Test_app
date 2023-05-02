@@ -211,31 +211,6 @@ padding-bottom:7px;</string>
      <string>Enter Your Age</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="tb6">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>350</y>
-      <width>231</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:rgba(0,0,0,0);
-border:none;
-border-bottom:2px solid rgba(46,82,101,200);
-color:rgba(0,0,0,240);
-padding-bottom:7px;</string>
-    </property>
-    <property name="placeholderText">
-     <string>Enter your Address</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="tb7">
     <property name="geometry">
      <rect>
@@ -260,6 +235,62 @@ padding-bottom:7px;</string>
     <property name="placeholderText">
      <string>Enter your Phone Number</string>
     </property>
+   </widget>
+   <widget class="QComboBox" name="tb6">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>350</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border:none;
+border-bottom:2px solid rgba(46,82,101,200);
+padding-bottom:7px;</string>
+    </property>
+    <property name="placeholderText">
+     <string>Select your city</string>
+    </property>
+    <property name="duplicatesEnabled">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string>pune</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>mumbai</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>delhi</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>lucknow</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>jaipur</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>chennai</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QLabel" name="label_2">

@@ -336,7 +336,7 @@ border-radius:50px</string>
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>100</y>
+     <y>80</y>
      <width>251</width>
      <height>161</height>
     </rect>
@@ -387,7 +387,7 @@ border-radius:50px</string>
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>280</y>
+     <y>240</y>
      <width>231</width>
      <height>111</height>
     </rect>
@@ -410,7 +410,7 @@ border-radius:50px</string>
    <property name="geometry">
     <rect>
      <x>660</x>
-     <y>410</y>
+     <y>360</y>
      <width>231</width>
      <height>141</height>
     </rect>
@@ -429,13 +429,13 @@ border-radius:50px</string>
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="g1">
    <property name="geometry">
     <rect>
-     <x>680</x>
-     <y>580</y>
-     <width>121</width>
-     <height>41</height>
+     <x>650</x>
+     <y>510</y>
+     <width>161</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="text">
@@ -460,6 +460,52 @@ border-radius:50px</string>
    </property>
    <property name="styleSheet">
     <string notr="true">border-radius:50px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="dr1">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>570</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="no">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>610</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
    </property>
    <property name="text">
     <string/>

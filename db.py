@@ -5,6 +5,7 @@ import sys
 
 import mysql.connector as con
 
+
 global score
 score = 0
 
@@ -17,6 +18,8 @@ class Loginapp(QDialog):
         self.b1.clicked.connect(self.show_reg)
 
     def login(self):
+        global username
+
         username = self.tb1.text()
         password = self.tb2.text()
         db = con.connect(host="localhost", user="root", password="", db="antidepbot")
@@ -48,6 +51,8 @@ class Loginapp(QDialog):
 
 
 class register(QDialog):
+    global username
+
     def __init__(self):
         super(register, self).__init__()
         loadUi("register.ui", self)
@@ -58,10 +63,11 @@ class register(QDialog):
         widget.setCurrentIndex(0)
 
     def reg(self):
+        global username
         username = self.tb3.text()
         password = self.tb4.text()
         age = self.tb5.text()
-        address = self.tb6.text()
+        address = self.tb6.currentText()
         ph = self.tb7.text()
         id1 = 1
         db = con.connect(host="localhost", user="root", password="", db="antidepbot")
@@ -73,6 +79,7 @@ class register(QDialog):
             + password
             + "'"
         )
+
         results = cursor.fetchone()
 
         if results:
@@ -82,8 +89,17 @@ class register(QDialog):
                 "User Already exists! please change your username",
             )
         else:
+            query4 = "SELECT MAX(id) FROM details"
+            cursor.execute(query4)
+            id2 = cursor.fetchall()
+            id1 = id2[0][0]
+            id1 = id1 + 2
             query = f"insert into details values({id1},'{username}','{password}',{age},'{address}','{ph}')"
+            print(id1)
             cursor.execute(query)
+            demoscore = 10
+            query2 = f"insert into testresults values ({id1},'{username}',{demoscore})"
+            cursor.execute(query2)
             db.commit()
             QMessageBox.information(
                 self, "Registration status", "Registered Sucessfully"
@@ -215,10 +231,37 @@ class result(QDialog):
     def __init__(self):
         super(result, self).__init__()
         loadUi("results.ui", self)
+        self.g1.clicked.connect(self.gethelp)
         self.setscore()
+
+    def gethelp(self):
+        global username
+        db = con.connect(host="localhost", user="root", password="", db="antidepbot")
+        cursor = db.cursor(buffered=True)
+        query5 = f"select Address from details where Username='{username}'"
+        cursor.execute(query5)
+        address1 = cursor.fetchone()
+        print(type(address1))
+        address = address1[0]
+        query6 = f"select Username from doctors where city='{address}'"
+        cursor.execute(query6)
+        listofusernames = cursor.fetchone()
+        dr1 = listofusernames[0]
+        query7 = f"select ph from doctors where city='{address}'"
+        cursor.execute(query7)
+        phonenumbers = cursor.fetchone()
+        print(type(phonenumbers))
+        n2 = phonenumbers[0]
+        n1 = str(n2)
+        self.dr1.setText(dr1)
+        self.no.setText(n1)
 
     def setscore(self):
         global score
+        db = con.connect(host="localhost", user="root", password="", db="antidepbot")
+        cursor = db.cursor()
+        query3 = f"insert into testresults(score) values ({score})"
+        cursor.execute(query3)
         self.marks.setText(f"{score}")
         if score <= 15:
             self.dr.setText("Your Score lies in the Category of Severe Depression")
